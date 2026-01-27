@@ -20,6 +20,10 @@
 - **Swiper.js** — слайдер проектов
 - **Iconify** — SVG иконки
 
+## 🌐 Демо
+
+[![Перейти на сайт](https://img.shields.io/badge/Смотреть_сайт-8957e5?style=for-the-badge&logo=github&logoColor=white)](https://krisfrontend.dev)
+
 ## 📦 Установка
 
 ```
@@ -28,6 +32,3 @@ npm start       # dev на localhost:9000
 npm run build   # production сборка
 ```
 
-## 🌐 Демо
-
-[krisfrontend.dev](https://krisfrontend.dev)
