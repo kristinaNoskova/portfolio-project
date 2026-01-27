@@ -22,11 +22,11 @@
 
 ## 📦 Установка
 
-\`\`\`bash
+```
 npm install
 npm start       # dev на localhost:9000
 npm run build   # production сборка
-\`\`\`
+```
 
 ## 🌐 Демо
 
