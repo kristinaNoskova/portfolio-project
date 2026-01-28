@@ -1,0 +1,42 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  background: $color-neon-green;
+  color: $bg-dark;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  @include hover {
+    background: $color-neon-blue;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba($color-neon-green, 0.3);
+  }
+}
+
+.scroll-top__icon {
+  font-size: 1.8rem;
+}

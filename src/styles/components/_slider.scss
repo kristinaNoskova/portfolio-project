@@ -1,0 +1,98 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+
+.slider {
+  position: relative;
+  padding-bottom: 60px;
+  perspective: 2000px;
+  overflow: visible;
+
+  @include vp-1023 {
+    padding: 0 20px;
+  }
+
+  @include vp-767 {
+    overflow: hidden;
+  }
+}
+
+.slider__wrapper {
+  align-items: stretch;
+  transform-style: preserve-3d;
+}
+
+.slider__slide {
+  width: 450px;
+  height: auto;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  transition-property: transform, opacity;
+  transition-timing-function: $ease-in-out-smooth;
+
+  @include vp-1023 {
+    width: 400px;
+  }
+
+  @include vp-767 {
+    width: 300px;
+  }
+}
+
+.slider__nav {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  background: rgba($bg-dark, 0.8);
+  border: 2px solid rgba($color-neon-green, 0.5);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s $ease-in-out-smooth;
+
+  svg {
+    color: $color-neon-green;
+    width: 25px;
+    height: 25px;
+  }
+
+  @include hover {
+    background: rgba($color-neon-green, 0.2);
+    box-shadow: 0 0 20px rgba($color-neon-green, 0.5);
+  }
+
+  @include active {
+    border-color: rgba($color-neon-green, 1);
+    background: rgba($color-neon-green, 0.4);
+    box-shadow: 0 0 10px rgba($color-neon-green, 0.5);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}
+
+.slider__nav.swiper-button-prev,
+.slider__nav.swiper-button-next {
+  margin: 0;
+}
+
+
+.slider__wrap {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  margin-top: 40px;
+
+  @include vp-767 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+}

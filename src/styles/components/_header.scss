@@ -1,0 +1,14 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+@use "../common/animations" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba($color-almost-black, 0.9);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}

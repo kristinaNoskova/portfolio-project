@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кристина Носкова - Frontend Developer</title>
+  <meta name="description"
+    content="Создаю современные интерфейсы на HTML, CSS и JavaScript с акцентом на UX, анимации и адаптивность.">
+  <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav__brand">
+        <span class="nav__logo">КН</span>
+      </div>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li class="nav__item">
+          <a class="nav__link active" href="#home">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#about">О себе</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#skills">Навыки</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#projects">Проекты</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#experience">Опыт работы</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contact">Контакты</a>
+        </li>
+      </ul>
+
+      <button class="nav__toggle" type="button" id="nav-toggle" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__bg">
+        <div class="floating-shape circle green"></div>
+        <div class="floating-shape circle pink"></div>
+        <div class="floating-shape square cyan"></div>
+        <div class="floating-shape square green"></div>
+        <div class="floating-shape triangle pink"></div>
+        <div class="floating-shape triangle cyan"></div>
+        <div class="floating-shape circle cyan"></div>
+        <div class="floating-shape square pink"></div>
+      </div>
+      <div class="hero__container container">
+        <div class="hero__content">
+          <div class="hero__greeting fade-in">
+            <span class="hero__greeting-text">Привет, меня зовут</span>
+          </div>
+          <h1 class="hero__name fade-in">
+            <span class="hero__name-text">Кристина Носкова</span>
+          </h1>
+          <div class="hero__title fade-in">
+            <span class="hero__title-prefix">Я</span>
+            <span class="hero__title-typing" id="typing-text"></span>
+            <span class="hero__cursor">|</span>
+          </div>
+          <p class="hero__description fade-in">
+            Создаю красивые веб-интерфейсы с вниманием к деталям и пользовательскому опыту
+          </p>
+          <div class="hero__buttons fade-in">
+            <a class="btn btn--primary hero__cta" href="#projects">Мои проекты</a>
+            <a class="btn btn--outline hero__cta" href="#contact">Связаться</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll fade-in">
+        <div class="hero__scroll-icon"></div>
+      </div>
+    </section>
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section__title fade-in">О себе</h2>
+        <div class="about__container fade-in">
+          <div class="about__content">
+            <div class="about__avatar">
+              <div class="about__avatar-placeholder"><img src="images/avatar.jpg" alt="Аватар" width="250" height="250">
+              </div>
+            </div>
+            <div class="about__info">
+              <h3 class="about__name">Кристина Носкова</h3>
+              <span class="about__profession">Frontend Developer</span>
+              <p class="about__description">
+                Я&nbsp;фронтенд-разработчик, свободно владею HTML, CSS и&nbsp;JavaScript. Создаю
+                качественные и&nbsp;современные интерфейсы.
+                Хочу работать в&nbsp;сильной команде, развиваться профессионально и&nbsp;воплощать
+                интересные идеи в жизнь.
+              </p>
+              <div class="about__details">
+                <div class="about__detail">
+                  <strong>Email:</strong>
+                  <a class="about__detail-link " href="mailto:krisnoskova.dev@gmail.com" aria-label="Отправить email">
+                    krisnoskova.dev@gmail.com
+                  </a>
+                </div>
+                <div class="about__detail">
+                  <strong>Телеграм:</strong>
+                  <a class="about__detail-link " href="https://t.me/kris_noskova" target="_blank"
+                    rel="noopener noreferrer" aria-label="Открыть Telegram профиль">
+                    @kris_noskova
+                  </a>
+                </div>
+                <div class="about__detail">
+                  <strong>Локация:</strong>Москва, Россия
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills section" id="skills">
+      <div class="container">
+        <h2 class="section__title fade-in">Навыки</h2>
+        <div class="skills__container">
+          <ul class="skills__content list-reset">
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="90">
+                <div class="skill__header">
+                  <span class="skill__name">
+                    HTML</span>
+                  <span class="skill__percentage">Продвинутый</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="90"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-html">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-html">Уверенное владение HTML5:
+                  пишу валидный и&nbsp;структурированный код, использую семантику.</span>
+              </div>
+            </li>
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="85">
+                <div class="skill__header">
+                  <span class="skill__name">CSS</span>
+                  <span class="skill__percentage">Продвинутый</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="85"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-css">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-css">Пишу чистый
+                  и&nbsp;адаптивный
+                  CSS с&nbsp;использованием Flexbox и&nbsp;Grid, применяю keyframes и transition для
+                  анимаций, обеспечиваю кроссбраузерность.</span>
+              </div>
+            </li>
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="80">
+                <div class="skill__header">
+                  <span class="skill__name">SCSS</span>
+                  <span class="skill__percentage">Продвинутый</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="80"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-scss">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-scss">Уверено владею SCSS:
+                  эффективно использую миксины, шаблоны и&nbsp;вложенность для переиспользования и
+                  автоматизации.</span>
+              </div>
+            </li>
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="95">
+                <div class="skill__header">
+                  <span class="skill__name">Адаптив, PixelPerfect, Accessibility</span>
+                  <span class="skill__percentage">Продвинутый</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="95"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-pp">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-pp">Разрабатываю интерфейсы,
+                  идеально соответствующие макетам, реализую адаптивную верстку и
+                  обеспечиваю доступность.</span>
+              </div>
+            </li>
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="65">
+                <div class="skill__header">
+                  <span class="skill__name">Pug</span>
+                  <span class="skill__percentage">Средний</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="65"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-pug">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-pug">Использую Pug для создания
+                  переиспользуемых компонентов и&nbsp;шаблонов, ускоряя сборку страниц и&nbsp;поддержку
+                  проекта.</span>
+              </div>
+            </li>
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="70">
+                <div class="skill__header">
+                  <span class="skill__name">JavaScript</span>
+                  <span class="skill__percentage">Средний</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="70"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-js">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-js">Средний уровень JavaScript:
+                  уверенно использую методы массивов, промисы и&nbsp;async/await, модули, манипуляции с
+                  DOM.</span>
+              </div>
+            </li>
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="75">
+                <div class="skill__header">
+                  <span class="skill__name">Git/GitHub</span>
+                  <span class="skill__percentage">Средний</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="75"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-git">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-git">Опыт работы с&nbsp;Git:
+                  создаю
+                  и&nbsp;сливаю ветки, управляю коммитами, решаю конфликты и&nbsp;синхронизирую изменения
+                  в
+                  команде</span>
+              </div>
+            </li>
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="75">
+                <div class="skill__header">
+                  <span class="skill__name">Figma</span>
+                  <span class="skill__percentage">Средний</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="75"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-figma">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-figma">Работаю в&nbsp;Figma:
+                  умею
+                  извлекать данные из&nbsp;макетов, создавать маски и&nbsp;при необходимости вносить
+                  небольшие
+                  правки в
+                  дизайн.</span>
+              </div>
+            </li>
+            <li class="skills__content-item">
+              <div class="skill fade-in" data-skill="45">
+                <div class="skill__header">
+                  <span class="skill__name">WordPress</span>
+                  <span class="skill__percentage">Базовый</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__progress" data-width="45"></div>
+                </div>
+              </div>
+              <div class="tooltip fade-in">
+                <button class="tooltip__toggle" type="button" aria-label="Смотреть подробнее"
+                  aria-labelledby="tooltip-level-wp">
+                </button>
+                <span class="tooltip__text" role="tooltip" id="tooltip-level-wp">Имею базовый опыт работы с
+                  WordPress: интегрировала дизайн в&nbsp;тему, использовала кастомные поля для расширения
+                  функционала сайта.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="projects section" id="projects">
+      <div class="container">
+        <h2 class="section__title fade-in">Проекты</h2>
+        <div class="swiper slider fade-in projects__swiper">
+          <div class="projects__container slider__wrapper projects__swiper-wrapper swiper-wrapper list-reset">
+            <article class="projects__card slider__slide swiper-slide">
+              <div class="projects__image">
+                <div class="projects__image-picture">
+                  <img src="images/portfolio@1x.webp" srcset="images/portfolio@2x.webp 2x"
+                    alt="Скриншот сайта-портфолио" width="528" height="200">
+                </div>
+                <span class="projects__badge">
+                  <iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon>
+                </span>
+              </div>
+
+              <div class="projects__content">
+                <h3 class="projects__title">Персональное портфолио</h3>
+                <p class="projects__description">
+                  Разработан полностью с&nbsp;нуля: от&nbsp;дизайна до&nbsp;деплоя.
+                  Кастомные анимации на&nbsp;Intersection Observer, темная тема.
+                  Webpack-сборка, оптимизация изображений и&nbsp;шрифтов.
+                  Lighthouse: 95+ по&nbsp;всем метрикам.
+                  Адаптив от 375px до десктопа.
+                </p>
+                <ul class="projects__technologies list-reset">
+                  <li class="projects__tech">HTML5/SCSS</li>
+                  <li class="projects__tech">JavaScript (ES6)</li>
+                  <li class="projects__tech">Webpack 5</li>
+                  <li class="projects__tech">Swiper.js</li>
+                  <li class="projects__tech">БЭМ</li>
+                  <li class="projects__tech">Адаптив</li>
+                </ul>
+
+                <div class="projects__links">
+                  <a class="projects__link" href="https://github.com/kristinaNoskova/portfolio-project" target="_blank"
+                    rel="noreferrer noopener">
+                    <iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="projects__link projects__link--demo" href="#home">
+                    <iconify-icon icon="lucide:sparkles" aria-hidden="true"></iconify-icon>
+                    <span>Вы здесь</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card slider__slide swiper-slide">
+              <div class="projects__image">
+                <div class="projects__image-picture">
+                  <img src="images/paratype@1x.webp" srcset="images/paratype@2x.webp 2x"
+                    alt="Проект Paratype — призёр чемпионата по верстке" width="528" height="200">
+                </div>
+                <span class="projects__badge">
+                  <!-- <iconify-icon icon="lucide:award"></iconify-icon> -->
+                  <iconify-icon icon="lucide:crown" aria-hidden="true"></iconify-icon>
+                </span>
+              </div>
+              <div class="projects__content">
+                <h3 class="projects__title">
+                  Paratype
+                </h3>
+                <p class="projects__description">
+                  Призёр чемпионата по&nbsp;верстке HTML&nbsp;Academy.
+                  Pixel Perfect вёрстка, кастомные анимации, полная адаптивность.
+                  Масштабируемый код. Высокая оценка жюри и&nbsp;менторов.
+                </p>
+                <ul class="projects__technologies list-reset">
+                  <li class="projects__tech">HTML5/SCSS</li>
+                  <li class="projects__tech">JavaScript (ES6)</li>
+                  <li class="projects__tech">Скейлинг</li>
+                  <li class="projects__tech">Без библиотек</li>
+                  <li class="projects__tech">Адаптив</li>
+                  <li class="projects__tech">Pixel Perfect</li>
+                  <li class="projects__tech">Vite</li>
+                </ul>
+                <div class="projects__links">
+                  <a class="projects__link" href="https://github.com/kristinaNoskova/paratype-project" target="_blank"
+                    rel="noopener noreferrer">
+                    <iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="projects__link projects__link--demo"
+                    href="https://kristinanoskova.github.io/paratype-project/" target="_blank"
+                    rel="noopener noreferrer">
+                    <iconify-icon icon="lucide:globe" aria-hidden="true"></iconify-icon>
+                    <span>Демо</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="projects__card slider__slide swiper-slide">
+              <div class="projects__image">
+                <div class="projects__image-picture">
+                  <img src="images/fellow-2@1x.webp" srcset="images/fellow-2@2x.webp 2x"
+                    alt="Проект Погнали - сервис для поиска попутчиков" width="528" height="200">
+                </div>
+              </div>
+              <div class="projects__content">
+                <h3 class="projects__title">
+                  Погнали
+                </h3>
+                <p class="projects__description">
+                  Pixel Perfect вёрстка с&nbsp;кастомной картой Яндекс.
+                  Адаптивная сетка, протестирована на&nbsp;всех устройствах.
+                  Модальные окна, тултипы, сложные UI-компоненты.
+                </p>
+                <ul class="projects__technologies list-reset">
+                  <li class="projects__tech">HTML/Pug</li>
+                  <li class="projects__tech">SCSS</li>
+                  <li class="projects__tech">JavaScript (ES6)</li>
+                  <li class="projects__tech">Swiper.js</li>
+                  <li class="projects__tech">Адаптив</li>
+                  <li class="projects__tech">Кроссбраузерность</li>
+                  <li class="projects__tech">Pixel Perfect</li>
+                  <li class="projects__tech">API Яндекс Карт</li>
+                </ul>
+                <div class="projects__links">
+                  <a class="projects__link" href="https://github.com/kristinaNoskova/fellow-travelers" target="_blank"
+                    rel="noopener noreferrer">
+                    <iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="projects__link projects__link--demo"
+                    href="https://kristinanoskova.github.io/fellow-travelers/" target="_blank"
+                    rel="noopener noreferrer">
+                    <iconify-icon icon="lucide:globe" aria-hidden="true"></iconify-icon>
+                    <span>Демо</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="projects__card slider__slide swiper-slide">
+              <div class="projects__image">
+                <div class="projects__image-picture">
+                  <img src="images/kekstagram@1x.webp" srcset="images/kekstagram@2x.webp 2x" alt="Проект Kekstagram"
+                    width="528" height="200">
+                </div>
+              </div>
+              <div class="projects__content">
+                <h3 class="projects__title">Kekstagram</h3>
+                <p class="projects__description">
+                  Социальная сеть фотографий с&nbsp;интерактивной фильтрацией и&nbsp;API-интеграцией.<br>
+                  Динамическая подгрузка данных, отправка формы с&nbsp;валидацией.<br>
+                  Работа с&nbsp;API и&nbsp;обработка ошибок.
+                </p>
+                <ul class="projects__technologies list-reset">
+                  <li class="projects__tech">JavaScript (ES6)</li>
+                  <li class="projects__tech">Fetch API</li>
+                  <li class="projects__tech">Pristine.js</li>
+                  <li class="projects__tech">Фильтрация</li>
+                  <li class="projects__tech">Обработка ошибок</li>
+                  <li class="projects__tech">Webpack</li>
+                </ul>
+                <div class="projects__links">
+                  <a class="projects__link" href="https://github.com/kristinaNoskova/2235875-kekstagram-32"
+                    target="_blank" rel="noreferrer noopener">
+                    <iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="projects__link projects__link--demo"
+                    href="https://kristinanoskova.github.io/2235875-kekstagram-32/" target="_blank"
+                    rel="noreferrer noopener">
+                    <iconify-icon icon="lucide:globe" aria-hidden="true"></iconify-icon>
+                    <span>Демо</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card slider__slide swiper-slide">
+              <div class="projects__image">
+                <div class="projects__image-picture">
+                  <img src="images/lifetour@1x.webp" srcset="images/lifetour@2x.webp 2x" alt="Проект lifetour"
+                    width="528" height="200">
+                </div>
+              </div>
+              <div class="projects__content">
+                <h3 class="projects__title">Lifetour</h3>
+                <p class="projects__description">
+                  Pixel Perfect вёрстка с&nbsp;несколькими слайдерами Swiper.
+                  Кастомная валидация форм на&nbsp;нативном JS.
+                  Адаптивная сетка под все разрешения.
+                  Проходит автоматические тесты качества.
+                </p>
+                <ul class="projects__technologies list-reset">
+                  <li class="projects__tech">HTML5/SCSS</li>
+                  <li class="projects__tech">JavaScript (ES6)</li>
+                  <li class="projects__tech">Swiper.js</li>
+                  <li class="projects__tech">Pixel Perfect</li>
+                  <li class="projects__tech">Адаптив</li>
+                  <li class="projects__tech">Vite</li>
+                </ul>
+                <div class="projects__links">
+                  <a class="projects__link" href="https://github.com/kristinaNoskova/accelerator-project-2"
+                    target="_blank" rel="noreferrer noopener">
+                    <iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="projects__link projects__link--demo"
+                    href="https://kristinanoskova.github.io/accelerator-project-2/" target="_blank"
+                    rel="noreferrer noopener">
+                    <iconify-icon icon="lucide:globe" aria-hidden="true"></iconify-icon>
+                    <span>Демо</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card slider__slide swiper-slide">
+              <div class="projects__image">
+                <div class="projects__image-picture">
+                  <img src="images/internship@1x.webp" srcset="images/internship@2x.webp 2x" alt="Проект internship"
+                    width="528" height="200">
+                </div>
+              </div>
+              <div class="projects__content">
+                <h3 class="projects__title">Internship</h3>
+                <p class="projects__description">
+                  Одностраничный сайт с&nbsp;модульной архитектурой, готовый к&nbsp;интеграции с&nbsp;CMS.<br>
+                  Формы с&nbsp;валидацией, кастомные самописные компоненты<br>
+                  Применён эффект инвертированного скругления.
+                </p>
+                <ul class="projects__technologies list-reset">
+                  <li class="projects__tech">HTML5/SCSS</li>
+                  <li class="projects__tech">JavaScript (ES6)</li>
+                  <li class="projects__tech">BEM</li>
+                  <li class="projects__tech">Pixel Perfect</li>
+                  <li class="projects__tech">Swiper.js, SlimSelect</li>
+                  <li class="projects__tech">Адаптив</li>
+                  <li class="projects__tech">Vite</li>
+                </ul>
+                <div class="projects__links">
+                  <a class="projects__link" href="https://github.com/kristinaNoskova/accelerator-project-3"
+                    target="_blank" rel="noreferrer noopener">
+                    <iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon>
+                    <iconify-icon icon="lucide:globe" aria-hidden="true"></iconify-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="projects__link projects__link--demo"
+                    href="https://kristinanoskova.github.io/accelerator-project-3/" target="_blank"
+                    rel="noreferrer noopener">
+                    <span>Демо</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="projects__card slider__slide swiper-slide">
+              <div class="projects__image">
+                <div class="projects__image-picture">
+                  <img src="images/supergym@1x.webp" srcset="images/supergym@2x.webp 2x" alt="Проект supergym"
+                    width="528" height="200">
+                </div>
+              </div>
+              <div class="projects__content">
+                <h3 class="projects__title">Supergym</h3>
+                <p class="projects__description">
+                  Кастомные UI-элементы проекта с&nbsp;анимацией: табы для переключения, аккордеон, слайдеры и
+                  интеграция видео.
+                </p>
+                <ul class="projects__technologies list-reset">
+                  <li class="projects__tech">HTML5/SCSS</li>
+                  <li class="projects__tech">JavaScript (ES6)</li>
+                  <li class="projects__tech">BEM</li>
+                  <li class="projects__tech">Pixel Perfect</li>
+                  <li class="projects__tech">Swiper.js</li>
+                  <li class="projects__tech">Адаптив</li>
+                  <li class="projects__tech">Vite</li>
+                </ul>
+                <div class="projects__links">
+                  <a class="projects__link" href="https://github.com/kristinaNoskova/accelerator-project-1"
+                    target="_blank" rel="noreferrer noopener">
+                    <iconify-icon icon="simple-icons:github" aria-hidden="true"></iconify-icon>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="projects__link projects__link--demo"
+                    href="https://kristinanoskova.github.io/accelerator-project-1/" target="_blank"
+                    rel="noreferrer noopener">
+                    <iconify-icon icon="lucide:globe" aria-hidden="true"></iconify-icon>
+                    <span>Демо</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="slider__wrap">
+            <button class="slider__nav slider__nav--prev projects__prev swiper-button-prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="slider__nav slider__nav--next projects__next swiper-button-next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="experience section" id="experience">
+      <div class="container">
+        <header class="experience__header fade-in">
+          <h2 class="experience__title section__title">ОПЫТ РАБОТЫ</h2>
+          <div class="experience__total">
+            ⏱ 1 год 1 месяц
+          </div>
+        </header>
+
+        <ul class="experience__accordion list-reset">
+          <li class="experience__item fade-in">
+            <button class="experience__button" type="button" aria-expanded="false" aria-controls="exp1-content">
+              <span class="experience__info">
+                <strong class="experience__title-card">
+                  <iconify-icon class="experience__iconify" icon="noto:office-building"
+                    aria-hidden="true"></iconify-icon>
+                  <span>Frontend Intern &mdash;&nbsp;Pug/SCSS/JS</span>
+                </strong>
+                <span class="experience__period">Июль 2025 — Ноябрь 2025</span>
+              </span>
+              <span class="experience__icon accordion-icon" aria-hidden="true"></span>
+            </button>
+
+            <div class="experience__content" id="exp1-content">
+              <div class="experience__content-inner">
+                <div class="experience__descr">Верстка корпоративных сайтов с компонентным подходом</div>
+                <ul class="experience__achievements list-reset">
+                  <li>Сверстала 8+ полноценных страниц на Pug</li>
+                  <li>Компонентная архитектура и переиспользуемость</li>
+                  <li>Pixel Perfect верстка из макетов Figma</li>
+                  <li>Работа с QA: тестирование в Chrome, Safari, Firefox</li>
+                  <li>SCSS-оптимизация: размер файлов -25%</li>
+                </ul>
+                <ul class="experience__tech list-reset">
+                  <li class="experience__tech-badge">Pug</li>
+                  <li class="experience__tech-badge">SCSS</li>
+                  <li class="experience__tech-badge">JavaScript</li>
+                  <li class="experience__tech-badge">Git</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="experience__item fade-in">
+            <button class="experience__button" type="button" aria-expanded="false" aria-controls="exp2-content">
+              <span class="experience__info">
+                <strong class="experience__title-card">
+                  <iconify-icon class="experience__iconify" icon="noto:office-building"
+                    aria-hidden="true"></iconify-icon>
+                  <span>Frontend Intern &mdash;&nbsp;JavaScript ES6+</span>
+                </strong>
+                <span class="experience__period">Август 2024 — Ноябрь 2024</span>
+              </span>
+              <span class="experience__icon accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="experience__content" id="exp2-content">
+              <div class="experience__content-inner">
+                <div class="experience__descr">Верстка и JS-логика интерактивных компонентов</div>
+                <ul class="experience__achievements list-reset">
+                  <li>Создала 12+ переиспользуемых UI-компонентов</li>
+                  <li>Реализация бургер-меню, слайдеров, модальных окон</li>
+                  <li>DOM-манипуляции для адаптивной логики</li>
+                  <li>Динамическая перестройка элементов под устройства</li>
+                </ul>
+                <ul class="experience__tech list-reset">
+                  <li class="experience__tech-badge">JavaScript ES6+</li>
+                  <li class="experience__tech-badge">DOM API</li>
+                  <li class="experience__tech-badge">Git</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="experience__item fade-in">
+            <button class="experience__button" type="button" aria-expanded="false" aria-controls="exp3-content">
+              <span class="experience__info">
+                <strong class="experience__title-card">
+                  <iconify-icon class="experience__iconify" icon="noto:office-building"
+                    aria-hidden="true"></iconify-icon>
+                  <span>Frontend Intern &mdash;&nbsp;HTML/CSS/SASS</span>
+                </strong>
+                <span class="experience__period">Февраль 2024 — Май 2024</span>
+              </span>
+              <span class="experience__icon accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="experience__content" id="exp3-content">
+              <div class="experience__content-inner">
+                <div class="experience__descr">Верстка блоков по макетам для интеграции с JS</div>
+                <ul class="experience__achievements list-reset">
+                  <li>Сверстала 8+ блоков и компонентов</li>
+                  <li>Сложные раскладки на Flexbox и Grid</li>
+                  <li>Mobile First адаптив под все устройства</li>
+                  <li>Семантическая разметка, WCAG 2.1</li>
+                  <li>Code review после каждого блока, созвоны с тимлидом</li>
+                </ul>
+                <ul class="experience__tech list-reset">
+                  <li class="experience__tech-badge">HTML5</li>
+                  <li class="experience__tech-badge">CSS/SCSS</li>
+                  <li class="experience__tech-badge">Git</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section__title fade-in">Контакты</h2>
+        <div class="contact__container">
+          <div class="contact__content">
+            <div class="contact__info fade-in">
+              <h3>Давайте работать вместе!</h3>
+              <p>Готова к&nbsp;новым вызовам и&nbsp;интересным проектам. Пишите, буду рада сотрудничеству!</p>
+
+              <div class="contact__details">
+                <div class="contact__detail">
+                  <iconify-icon class="contact__icon" icon="twemoji:envelope" aria-hidden="true"></iconify-icon>
+                  <div>
+                    <strong>Email</strong>
+                    <p>
+                      <a href="mailto:krisnoskova.dev@gmail.com" aria-label="Отправить email">
+                        krisnoskova.dev@gmail.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="contact__detail">
+                  <iconify-icon class="contact__icon" icon="logos:telegram" aria-hidden="true"></iconify-icon>
+                  <div>
+                    <strong>Телеграм</strong>
+                    <p>
+                      <a href="https://t.me/kris_noskova" target="_blank" rel="noopener noreferrer"
+                        aria-label="Открыть Telegram профиль">
+                        @kris_noskova
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="contact__detail">
+                  <iconify-icon class="contact__icon" icon="twemoji:round-pushpin" aria-hidden="true"></iconify-icon>
+                  <div>
+                    <strong>Локация</strong>
+                    <p>Москва, Россия</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact__img">
+              <picture>
+                <source type="image/webp" width="528" height="400"
+                  srcset="images/contact-bg@1x.webp 1x, images/contact-bg@2x.webp 2x">
+                <img src="images/contact-bg@1x.jpg" srcset="images/contact-bg@2x.png 2x" alt="" width="528"
+                  height="400">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <span class="footer__logo">КН</span>
+          <p>Frontend Developer</p>
+        </div>
+
+        <div class="footer__social">
+          <a class="footer__social-link" href="https://github.com/kristinaNoskova" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+          <a class="footer__social-link" href="https://t.me/kris_noskova" target="_blank" rel="noopener noreferrer"
+            aria-label="Открыть Telegram профиль">
+            Telegram
+          </a>
+          <a class="footer__social-link" href="mailto:krisnoskova.dev@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Developed by Kristina Noskova</p>
+      </div>
+    </div>
+  </footer>
+  <button class="scroll-top" id="scroll-top" type="button">
+    <span class="visually-hidden">В начало страницы</span>
+    <iconify-icon class="scroll-top__icon" icon="lucide:chevron-up" aria-hidden="true"></iconify-icon>
+  </button>
+
+
+</body>
+
+</html>

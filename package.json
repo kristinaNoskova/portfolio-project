@@ -1,0 +1,61 @@
+{
+  "name": "",
+  "version": "22.0.0",
+  "private": true,
+  "description": "Проект «{{projectTitle}}» от HTML Academy",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "start": "npm run dev",
+    "lint:styles": "stylelint \"src/**/*.scss\" --fix",
+    "lint:js": "eslint \"src/**/*.js\" --fix",
+    "validate:html": "html-validator src/**/*.html",
+    "lint:html": "linthtml \"src/**/*.html\"",
+    "lint": "npm run lint:styles && npm run lint:js && npm run validate:html",
+    "lint:check": "npm run lint:styles -- --no-fix && npm run lint:js -- --no-fix && npm run validate:html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
+    "@linthtml/linthtml": "^0.10.2",
+    "@linthtml/linthtml-config-recommended": "^0.2.0",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.4",
+    "eslint": "^8.57.1",
+    "eslint-config-htmlacademy": "^10.0.1",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.6",
+    "linthtml-config-htmlacademy": "^1.1.0",
+    "mini-css-extract-plugin": "^2.10.0",
+    "postcss-scss": "^4.0.9",
+    "sass": "^1.97.3",
+    "sass-loader": "^16.0.6",
+    "style-loader": "4.0.0",
+    "stylelint": "^17.0.0",
+    "stylelint-config-htmlacademy": "^4.4.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "svg-spritemap-webpack-plugin": "^5.1.0",
+    "w3c-html-validator": "^2.2.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3",
+    "webpack-remove-empty-scripts": "^1.1.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "engines": {
+    "node": "22"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.19",
+    "iconify-icon": "^3.0.2",
+    "swiper": "^12.0.3"
+  }
+}

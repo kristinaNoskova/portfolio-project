@@ -1,0 +1,52 @@
+@use "../common/variables" as *;
+
+.skills {
+  background: $bg-dark;
+}
+
+.skills__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* при добавлении новых элементов нужно поправить */
+
+.skills__content-item {
+  position: relative;
+
+  &:nth-child(1) .tooltip {
+    z-index: 120;
+  }
+
+  &:nth-child(2) .tooltip {
+    z-index: 115;
+  }
+
+  &:nth-child(3) .tooltip {
+    z-index: 110;
+  }
+
+  &:nth-child(4) .tooltip {
+    z-index: 105;
+  }
+
+  &:nth-child(5) .tooltip {
+    z-index: 100;
+  }
+
+  &:nth-child(6) .tooltip {
+    z-index: 95;
+  }
+
+  &:nth-child(7) .tooltip {
+    z-index: 90;
+  }
+
+  &:nth-child(8) .tooltip {
+    z-index: 85;
+  }
+
+  &:nth-child(9) .tooltip {
+    z-index: 80;
+  }
+}

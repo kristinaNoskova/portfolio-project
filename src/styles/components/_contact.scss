@@ -1,0 +1,85 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+
+.contact {
+  background: $bg-dark;
+}
+
+.contact__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+
+  @include vp-767 {
+    & {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+}
+
+.contact__info {
+  & h3 {
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: $color-white;
+  }
+
+  & p {
+    color: $text-gray;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact__detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  & strong {
+    display: block;
+    margin-bottom: 5px;
+    color: $color-neon-green;
+  }
+
+  & p {
+    margin: 0;
+    color: $text-gray;
+  }
+}
+
+.contact__icon {
+  font-size: 1.5rem;
+}
+
+.contact__img {
+  align-self: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.contact__img img {
+  display: block;
+  width: 450px;
+  height: auto;
+
+  @include vp-767 {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+  }
+}

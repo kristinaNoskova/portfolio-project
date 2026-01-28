@@ -1,0 +1,313 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+@use "../common/animations" as *;
+
+.experience {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
+}
+
+.experience__total {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgba($color-white, 0.9);
+  border-radius: 50px;
+
+  @include vp-767 {
+    font-size: 0.8rem;
+  }
+}
+
+.experience__item:not(:last-child) {
+  margin-bottom: 30px;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.experience__button {
+  position: relative;
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 40px;
+  text-align: left;
+  border: none;
+  background: $color-transparent;
+  cursor: pointer;
+  transition: all 0.4s $ease-in-out-smooth;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    z-index: 0;
+    padding: 2px;
+    background: linear-gradient(45deg,
+        $color-teal-700,
+        $color-teal-400,
+        $color-neon-green,
+        $color-teal-300);
+    background-size: 300% 300%;
+    border-radius: 2px;
+    mask:
+      linear-gradient($color-white 0 0) content-box,
+      linear-gradient($color-white 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  @include hover {
+    transform: translateY(-4px) scale(1.005);
+
+    &::before {
+      opacity: 1;
+      animation: gradient-shift 3s ease infinite;
+    }
+
+    & .experience__icon {
+      color: $color-neon-green;
+    }
+  }
+
+  @include vp-767 {
+    padding: 30px 25px;
+  }
+
+  &[aria-expanded="true"] {
+    .experience__icon::before {
+      transform: translate(-50%, -50%) scaleY(0) rotate(90deg);
+    }
+  }
+}
+
+.experience__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience__title-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $color-white;
+
+  @include vp-767 {
+    font-size: 1.5rem;
+  }
+}
+
+.experience__iconify {
+  font-size: 1.5rem;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.experience__period {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba($color-white, 0.8);
+
+  @include vp-767 {
+    font-size: 1rem;
+  }
+}
+
+.experience__icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: $color-white;
+  transition: all 0.3s $ease-in-out-smooth;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    transform-origin: center;
+    background: currentColor;
+    transition: all 0.3s $ease-in-out-smooth;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) scaleY(1) rotate(90deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.experience__content {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  border-radius: 0 0 16px 16px;
+  transition: all 0.5s $ease-in-out-smooth;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+        $color-transparent,
+        $color-teal-400,
+        $color-neon-green,
+        $color-teal-400,
+        $color-transparent);
+    opacity: 0;
+    transition: opacity 0.6s $ease-in-out-smooth;
+  }
+
+  // Состояние открыто
+  &.is-open {
+    max-height: 1000px;
+    opacity: 1;
+    overflow: visible;
+
+    &::before {
+      opacity: 0.6;
+    }
+
+    .experience__content-inner {
+      transform: translateY(0);
+    }
+
+    .experience__descr {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.1s;
+    }
+
+    .experience__achievements {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.2s;
+    }
+
+    .experience__tech {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.3s;
+    }
+  }
+}
+
+.experience__content-inner {
+  padding: 35px 0 40px;
+  transform: translateY(-30px);
+  transition: transform 0.4s $ease-in-out-smooth 0.1s;
+}
+
+.experience__descr,
+.experience__achievements,
+.experience__tech {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s $ease-in-out-smooth, transform 0.4s $ease-in-out-smooth;
+}
+
+.experience__descr {
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba($color-white, 0.9);
+  background: rgba($color-teal-500, 0.06);
+  border-radius: 8px;
+  border-left: 3px solid $color-teal-500;
+
+  @include vp-767 {
+    padding: 15px;
+  }
+}
+
+.experience__achievements {
+  margin-bottom: 30px;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+
+  & li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding: 16px 16px 16px 20px;
+    font-size: 1.05rem;
+    color: rgba($color-white, 0.85);
+    line-height: 1.6;
+    background: rgba($color-white, 0.03);
+    border-radius: 8px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: $color-neon-green;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba($color-neon-green, 0.8);
+    }
+
+    @include vp-767 {
+      padding: 14px 14px 14px 20px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.experience__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background: rgba($color-white, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(var(--color-teal-400), 0.15);
+
+  @include vp-767 {
+    padding: 15px;
+  }
+}
+
+.experience__tech-badge {
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $color-cream-50;
+  background: rgba($color-teal-600, 0.25);
+  border: 1px solid rgba($color-teal-400, 0.4);
+}

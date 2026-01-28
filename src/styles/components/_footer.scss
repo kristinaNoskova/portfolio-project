@@ -1,0 +1,51 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+
+.footer {
+  padding: 60px 0 30px;
+  background: $bg-dark-secondary;
+  border-top: 1px solid rgba($color-white, 0.1);
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+.footer__brand p {
+  margin: 5px 0 0 0;
+  color: $text-gray;
+}
+
+.footer__logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $color-neon-green;
+  text-shadow: 0 0 10px $color-neon-green;
+  user-select: none;
+}
+
+.footer__social {
+  display: flex;
+  gap: 25px;
+}
+
+.footer__social-link {
+  @include link-underline();
+}
+
+.footer__bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba($color-white, 0.1);
+  color: $text-gray;
+}

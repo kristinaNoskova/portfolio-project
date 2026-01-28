@@ -1,0 +1,82 @@
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+
+  &--primary {
+    background: linear-gradient(135deg, $color-neon-green, $color-neon-blue);
+    color: $bg-dark;
+    box-shadow: 0 10px 30px rgba($color-neon-green, 0.3);
+
+    @include hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba($color-neon-green, 0.4);
+      color: $bg-dark;
+    }
+
+    @include active {
+      box-shadow: 0 15px 40px rgba($color-neon-green, 0.8);
+    }
+  }
+
+  &--secondary {
+    background: $color-secondary;
+    color: $text-gray;
+
+    @include hover {
+      background: $color-secondary-hover;
+    }
+
+    @include active {
+      background: $color-secondary-active;
+    }
+  }
+
+  &--outline {
+    position: relative;
+    background: $color-transparent;
+    color: $color-neon-green;
+    border: 2px solid $color-neon-green;
+
+    @include hover {
+      color: $bg-dark;
+      background: $color-secondary;
+
+      &:hover::before {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &--outline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: $color-neon-green;
+    transition: 0.3s ease;
+    z-index: -1;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

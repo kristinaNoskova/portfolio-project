@@ -1,0 +1,150 @@
+@use "../common/animations" as *;
+@use "../common/variables" as *;
+@use "../common/mixins" as *;
+
+.floating-shape {
+  position: absolute;
+  opacity: 0.8;
+  background: $color-transparent;
+  border: none;
+  will-change: transform;
+  animation: float-gentle 10s ease-in-out infinite;
+
+  &.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &.square {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+  }
+
+  &.triangle {
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &.green {
+    box-shadow:
+      0 0 5px rgba($color-green, 0.7),
+      0 0 10px rgba($color-green, 0.7),
+      0 0 20px rgba($color-green, 0.7),
+      0 0 20px rgba($color-green, 0.7),
+      inset 0 0 5px rgba($color-green, 0.3);
+    background: linear-gradient(135deg,
+        rgba($color-green, 0.7) 0%,
+        rgba($color-green, 0.3) 100%);
+  }
+
+  &.pink {
+    box-shadow:
+      0 0 5px $color-pink-shadow,
+      0 0 10px $color-pink-shadow,
+      0 0 20px $color-pink-shadow,
+      0 0 20px $color-pink-shadow,
+      inset 0 0 5px rgba($color-pink-shadow, 0.3);
+    background: linear-gradient(135deg,
+        rgba($color-pink-shadow, 0.7) 0%,
+        rgba($color-pink-shadow, 0.3) 100%);
+  }
+
+  &.cyan {
+    box-shadow:
+      0 0 5px $color-blue-shadow,
+      0 0 10px $color-blue-shadow,
+      0 0 20px $color-blue-shadow,
+      0 0 20px $color-blue-shadow,
+      inset 0 0 5px rgba($color-blue-shadow, 0.3);
+    background: linear-gradient(135deg,
+        rgba($color-blue-shadow, 0.6) 0%,
+        rgba($color-blue-shadow, 0.3) 100%);
+  }
+
+  &.circle.green {
+    top: 10%;
+    left: 5%;
+    animation-duration: 13s;
+    animation-delay: 0s;
+    animation-name: float-gentle-1;
+  }
+
+  &.circle.pink {
+    top: 70%;
+    right: 10%;
+    animation-duration: 10.5s;
+    animation-delay: 2s;
+    animation-name: float-gentle-2;
+  }
+
+  &.square.cyan {
+    top: 20%;
+    right: 20%;
+    animation-duration: 11s;
+    animation-delay: -1s;
+    width: 60px;
+    height: 60px;
+    animation-name: float-gentle-1;
+  }
+
+  &.square.green {
+    bottom: 40%;
+    left: 80%;
+    animation-duration: 20s;
+    animation-delay: 1s;
+    animation-name: float-gentle-2;
+  }
+
+  &.triangle.pink {
+    top: 50%;
+    left: 15%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+    animation-name: float-gentle-1;
+  }
+
+  &.triangle.cyan {
+    bottom: 20%;
+    right: 5%;
+    animation-duration: 13s;
+    animation-delay: -2s;
+    animation-name: float-gentle-2;
+  }
+
+  &.circle.cyan {
+    top: 80%;
+    left: 60%;
+    animation-duration: 15s;
+    animation-delay: 4s;
+    width: 30px;
+    height: 30px;
+    animation-name: float-gentle-1;
+  }
+
+  &.square.pink {
+    bottom: 60%;
+    left: 30%;
+    animation-duration: 20s;
+    animation-delay: 0.5s;
+    animation-name: float-gentle-2;
+  }
+
+  @include vp-767 {
+    transform: scale(0.7);
+    opacity: 0.6;
+
+    &.circle,
+    &.square {
+      width: 30px;
+      height: 30px;
+    }
+
+    .floating-shape {
+      opacity: 0.6;
+    }
+
+  }
+}

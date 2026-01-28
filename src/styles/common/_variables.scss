@@ -1,0 +1,56 @@
+// Colors
+// ---------------------------------
+
+// === Base Colors ===
+$color-white: rgb(255, 255, 255);
+$color-transparent: rgba(255, 255, 255, 0);
+$color-black: rgb(0, 0, 0);
+$color-cream-50: rgba(252, 252, 249, 1);
+$color-brown-600: rgb(94, 82, 64);
+$color-navy-900: #1e1e3f;
+$color-almost-black: rgb(10, 10, 10);
+$color-charcoal: #242424;
+
+// === Teal Palette ===
+$color-teal-300: rgb(50, 184, 198);
+$color-teal-400: rgb(45, 166, 178);
+$color-teal-500: rgb(33, 128, 141);
+$color-teal-600: rgb(29, 116, 128);
+$color-teal-700: rgb(26, 104, 115);
+$color-slate-900: rgba(19, 52, 59, 1);
+
+// === Semantic Tokens ===
+$color-secondary: rgba($color-brown-600, 0.12);
+$color-secondary-hover: rgba($color-brown-600, 0.2);
+$color-secondary-active: rgba($color-brown-600, 0.25);
+$color-focus-ring: rgba($color-teal-500, 0.4);
+
+// === Neon Colors ===
+$color-neon-green: rgb(0, 255, 136);
+$color-green: rgb(0, 255, 0);
+$color-neon-pink: #ff0080;
+$color-pink-shadow: rgb(255, 20, 147);
+$color-neon-blue: #00d4ff;
+$color-blue-shadow: rgb(0, 255, 255);
+
+// === Backgrounds ===
+$bg-dark: #0a0a0a;
+$bg-dark-secondary: #1a1a1a;
+
+// === Text ===
+$text-gray: #a0a0a0;
+
+// Viewports
+// ---------------------------------
+$vp-390: 390px;
+$vp-768: 768px;
+$vp-920: 920px;
+$vp-1024: 1024px;
+$vp-1280: 1280px;
+$vp-1440: 1440px;
+$vp-1600: 1600px;
+$vp-1920: 1920px;
+
+// Animation
+// ---------------------------------
+$ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,0 +1,125 @@
+@use "./variables" as *;
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(:focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(:focus-visible) {
+      @content;
+    }
+  }
+
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+  @media (hover: hover) {
+    &:hover:not(:focus-visible) {
+      @content;
+    }
+  }
+
+  &:focus-visible {
+    @content;
+  }
+
+  &:active {
+    @content;
+  }
+}
+
+@mixin vp-1600 {
+  @media (min-width: ($vp-1600 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1439 {
+  @media (max-width: ($vp-1440 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: ($vp-1024 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1024 {
+  @media (min-width: ($vp-1024)) {
+    @content;
+  }
+}
+
+@mixin vp-920 {
+  @media (max-width: ($vp-920 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-921 {
+  @media (min-width: ($vp-920)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-390 {
+  @media (max-width: ($vp-390)) {
+    @content;
+  }
+}
+
+@mixin link-underline($color: $color-neon-green, $underline-height: 2px, $offset: -3px) {
+  position: relative;
+  text-decoration: none;
+  color: $text-gray;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: $offset;
+    left: 0;
+    width: 100%;
+    height: $underline-height;
+    background: $color;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  @include hover {
+    color: $color;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}

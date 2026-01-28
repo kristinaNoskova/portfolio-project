@@ -1,0 +1,5 @@
+**/vendor/*
+engine_scripts/**
+source/sass/global/reboot.scss
+**/*.cjs
+.*

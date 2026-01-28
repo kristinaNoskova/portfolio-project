@@ -1,0 +1,9 @@
+@use "./mixins" as *;
+
+.container {
+  margin-inline: max(24px, (100% - 1200px) / 2);
+
+  @include vp-767 {
+    margin-inline: max(15px, (100% - 1200px) / 2);
+  }
+}

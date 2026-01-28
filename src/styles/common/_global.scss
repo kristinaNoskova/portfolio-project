@@ -1,0 +1,106 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  font-family:
+    "FKGroteskNeue",
+    "Geist",
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 375px;
+  font-family: "Inter", sans-serif;
+  background: $bg-dark;
+  color: $color-white;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+
+  @include vp-767 {
+    overflow-x: visible;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: $color-slate-900;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  margin: 0 0 16px 0;
+}
+
+a {
+  color: $color-teal-500;
+  text-decoration: none;
+  transition: color 0.3s $ease-in-out-smooth;
+
+  @include hover {
+    color: $color-teal-700;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid $color-teal-500;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-shape {
+    animation: none;
+  }
+}
