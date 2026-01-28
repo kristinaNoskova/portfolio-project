@@ -37,7 +37,6 @@
       padding-top: 50px;
       padding-left: 15px;
       transform: translateX(-100%);
-      backdrop-filter: blur(10px);
       background: rgba($color-almost-black, 0.95);
       transition: 0.3s ease;
     }
@@ -76,6 +75,11 @@
     background: $color-white;
     border-radius: 3px;
     transition: 0.3s ease;
+
+    &:nth-child(2) {
+      transform: scaleX(1);
+      transform-origin: center;
+    }
   }
 
   @include vp-767 {
@@ -89,6 +93,7 @@
 
     &.active span:nth-child(2) {
       opacity: 0;
+      transform: scaleX(0)
     }
 
     &.active span:nth-child(3) {
