@@ -19,6 +19,7 @@ html {
     sans-serif;
   line-height: 1.5;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -34,6 +35,10 @@ body {
 
   @include vp-767 {
     overflow-x: visible;
+  }
+
+  &.menu-open {
+    overflow: hidden;
   }
 }
 

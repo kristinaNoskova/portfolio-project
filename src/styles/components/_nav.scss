@@ -36,7 +36,10 @@
       justify-content: flex-start;
       padding-top: 50px;
       padding-left: 15px;
+      padding-bottom: 50px;
       transform: translateX(-100%);
+      overscroll-behavior-y: contain;
+      overflow-y: auto;
       background: rgba($color-almost-black, 0.95);
       transition: 0.3s ease;
     }

@@ -28,6 +28,7 @@ function updateActiveNav() {
 function toggleMobileMenu() {
   const isOpen = navMenu.classList.toggle('show');
   navToggle.classList.toggle('active', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
 }
 
 function closeMobileMenu() {
@@ -37,6 +38,7 @@ function closeMobileMenu() {
 
   navMenu.classList.remove('show');
   navToggle.classList.remove('active');
+  document.body.classList.remove('menu-open');
 }
 
 function smoothScrollToSection(targetId) {
